@@ -7,6 +7,7 @@ extends:
   - plugin:@typescript-eslint/recommended
   - plugin:@typescript-eslint/recommended-requiring-type-checking
   - airbnb
+  - airbnb/hooks
   - airbnb-typescript
   - prettier
 ignorePatterns:
