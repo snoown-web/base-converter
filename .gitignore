@@ -7,3 +7,6 @@ node_modules/
 # CSS
 *.css
 *.css.map
+
+# Jest
+coverage/

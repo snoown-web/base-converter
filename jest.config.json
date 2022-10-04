@@ -1,0 +1,4 @@
+{
+  "roots": ["<rootDir>/component/"],
+  "testMatch": ["**/__tests__/**/*.js"]
+}
