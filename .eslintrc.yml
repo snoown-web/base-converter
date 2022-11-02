@@ -10,5 +10,7 @@ extends:
   - airbnb/hooks
   - airbnb-typescript
   - prettier
+rules:
+  import/extensions: ['error', 'ignorePackages']
 ignorePatterns:
   - '*.js'
