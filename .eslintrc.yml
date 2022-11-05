@@ -10,5 +10,11 @@ extends:
   - airbnb/hooks
   - airbnb-typescript
   - prettier
+rules:
+  import/extensions: ['error', 'ignorePackages']
+  react/function-component-definition:
+    - error
+    - namedComponents: [function-declaration, function-expression, arrow-function]
+      unnamedComponents: [function-expression, arrow-function]
 ignorePatterns:
   - '*.js'
