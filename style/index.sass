@@ -1,0 +1,23 @@
+@use 'variable'
+@use 'integer'
+
+main
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
+
+#properties
+  display: flex
+  justify-content: flex-end
+  gap: 1.6ch
+
+  > div
+    display: flex
+    gap: 0.6ch
+    padding: 1ch 1.6ch
+    border-top: 1px solid transparent
+    border-bottom: 1px solid variable.$accent-color
+
+    > input
+      width: 3ch
+      text-align: right
