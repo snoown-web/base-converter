@@ -1,0 +1,20 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    uses: snoown-web/shared-resource/.github/workflows/test.yml@main
+
+  deploy-static:
+    needs: test
+    uses: snoown-web/shared-resource/.github/workflows/deploy-static.yml@main
+    with:
+      project-root: base-converter/
+    secrets: inherit
