@@ -27,14 +27,14 @@ const Integer: React.FC<IntegerProps> = ({ row, integer, sign, bit, setInteger }
 
   return (
     <div>
-      <div>
+      <label>
         <span>base:</span>
         <input
           className={radix.is ? '' : 'warning'}
           value={radix.value}
           onChange={(e) => setRadix(e.target.value)}
         />
-      </div>
+      </label>
 
       <input
         className={!integer.is && radix.value === integer.radix ? 'warning' : ''}
@@ -99,7 +99,7 @@ const Index: React.FC = () => {
           {sign ? 'signed' : 'unsigned'}
         </button>
 
-        <div>
+        <label>
           <span>bit:</span>
           <input
             className={bit.is ? '' : 'warning'}
@@ -109,7 +109,7 @@ const Index: React.FC = () => {
               setBit(e.target.value);
             }}
           />
-        </div>
+        </label>
       </div>
 
       <div id='integers'>

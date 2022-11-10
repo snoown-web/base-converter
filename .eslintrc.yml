@@ -12,6 +12,7 @@ extends:
   - prettier
 rules:
   import/extensions: ['error', 'ignorePackages']
+  jsx-a11y/label-has-associated-control: off
   react/function-component-definition:
     - error
     - namedComponents: [function-declaration, function-expression, arrow-function]
