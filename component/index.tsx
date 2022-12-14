@@ -23,7 +23,7 @@ const isRadix = (_: Is<number>, action: string): Is<number> => {
 const Integer: React.FC<IntegerProps> = ({ row, integer, sign, bit, setInteger }) => {
   const [radix, setRadix] = useReducer(isRadix, { is: true, value: [10, 2, 8, 16][row] ?? 2 });
 
-  const isProperty = radix.is && bit.is;
+  const property = radix.is && bit.is;
 
   return (
     <div>
@@ -38,9 +38,9 @@ const Integer: React.FC<IntegerProps> = ({ row, integer, sign, bit, setInteger }
 
       <input
         className={!integer.is && radix.value === integer.radix ? 'warning' : ''}
-        value={isProperty ? integerWrapper.decode(integer, radix.value, sign, bit.value) : ''}
+        value={property ? integerWrapper.decode(integer, radix.value, sign, bit.value) : ''}
         onChange={(e) => {
-          if (isProperty)
+          if (property)
             setInteger({
               type: 'encode',
               string: e.target.value,
